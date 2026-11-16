@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arizona State University | Innovation</title>
+    <style>
+        /* CSS Reset & General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        /* ASU Official Colors */
+        :root {
+            --asu-maroon: #8C1D40;
+            --asu-gold: #FFC627;
+            --asu-dark: #1E1E1E;
+            --asu-light: #ffffff;
+        }
+
+        /* Header Navigation */
+        header {
+            background-color: var(--asu-maroon);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--asu-gold);
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--asu-light);
+            font-weight: 400;
+            font-size: 1.2rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: var(--asu-light);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--asu-gold);
+        }
+
+        /* Hero Section */
+        .hero {
+            /* Using a placeholder university image */
+            background: linear-gradient(rgba(140, 29, 64, 0.85), rgba(30, 30, 30, 0.85)), 
+                        url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--asu-light);
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            color: var(--asu-gold);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--asu-gold);
+            color: var(--asu-maroon);
+            padding: 12px 35px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        }
+
+        .btn:hover {
+            background-color: #ffd75e;
+            transform: translateY(-2px);
+        }
+
+        /* Features/Info Section */
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 80px 5%;
+            justify-content: center;
+        }
+
+        .card {
+            background: var(--asu-light);
+            flex: 1;
+            min-width: 300px;
+            max-width: 400px;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            border-top: 5px solid var(--asu-maroon);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: var(--asu-maroon);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #666;
+            font-size: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--asu-dark);
+            color: #aaa;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        footer span {
+            color: var(--asu-gold);
+            font-weight: bold;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Header -->
+    <header>
+        <a href="#" class="logo">ASU <span>University</span></a>
+        <nav>
+            <ul>
+                <li><a href="#">Academics</a></li>
+                <li><a href="#">Admissions</a></li>
+                <li><a href="#">Research</a></li>
+                <li><a href="#">Campus Life</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Banner Section -->
+    <section class="hero">
+        <h1>#1 in the U.S. for Innovation</h1>
+        <p>Welcome to Arizona State University. We are measured not by whom we exclude, but by whom we include and how they succeed.</p>
+        <a href="#" class="btn">Explore Programs</a>
+    </section>
+
+    <!-- Information Cards -->
+    <section class="features">
+        <div class="card">
+            <h3>Academic Excellence</h3>
+            <p>Discover hundreds of degree programs taught by world-class faculty. From engineering to arts, find your passion and build your future at ASU.</p>
+        </div>
+        
+        <div class="card">
+            <h3>Pioneering Research</h3>
+            <p>Join a community of scholars dedicated to solving society's greatest challenges through interdisciplinary research and cutting-edge technology.</p>
+        </div>
+
+        <div class="card">
+            <h3>Vibrant Campus Life</h3>
+            <p>Experience a dynamic student life with over 1,000 student clubs, state-of-the-art fitness centers, and rich cultural traditions across multiple campuses.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 <span>Arizona State University</span>. All rights reserved.</p>
+        <p>This is an unofficial static template created for demonstration purposes.</p>
+    </footer>
+
+</body>
+</html>
